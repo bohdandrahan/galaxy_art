@@ -3,7 +3,7 @@ let canvas_scale_x = 0.85;
 let canvas_scale_y = 0.7;
 let windows_width;
 let windows_height;
-
+let pixel_fracture = 1000; // divide smaller window size on this var to get one unit of size;
 
 function preload() {
     font = loadFont('./assets/fonts/Asap-Regular.otf');
@@ -24,6 +24,7 @@ function setup() {
 
     cam = createCamera();
     cam.setPosition(300, 400, 550);
+    cam.lookAt(0, 0, 0)
 
     textFont(font);
     textSize(36);
@@ -33,7 +34,7 @@ function setup() {
 
 function draw() {
     orbitControl(1, 1, 1);
-    background(200)
+    //background(200)
     draw_debug()
 }
 
