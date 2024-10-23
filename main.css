@@ -8,6 +8,7 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
+	background: black;
 }
 
 main {
@@ -26,23 +27,15 @@ main {
 	justify-content: center;
 	align-items: center;
 
-	background-color: lightblue;
+	background-color: #6464dc;
 	width: 95%;
 	min-width: 400px;
 	height: 100%;
 	min-height: 400px;
 }
 
-#main-canvas {
-	align-items: center;
-	background-color: red;
-	width: 95%;
-	height: 95%;
-	border: 1px solid #000;
-}
-
 header {
-	background: lightgreen;
+	background: #f70084;
 	text-align: center;
 	margin: 3px;
 }
@@ -55,7 +48,8 @@ footer {
 
 
 #credits {
-	background: lightsalmon;
+	background: #6464dc;
+	color: white;
 }
 
 #contact-wrapper {
@@ -68,5 +62,5 @@ footer {
 }
 
 #copyright {
-	background: yellow;
+	background: #e42747;
 }

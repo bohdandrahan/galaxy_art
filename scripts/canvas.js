@@ -1,6 +1,6 @@
 let smaller_window_size;
 let canvas_scale_x = 0.85;
-let canvas_scale_y = 0.7;
+let canvas_scale_y = 0.8;
 let windows_width;
 let windows_height;
 let pixel_fracture = 1000; // divide smaller window size on this var to get one unit of size;
