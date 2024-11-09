@@ -10,7 +10,6 @@ function preload() {
 }
 
 function setup() {
-
     textFont(font);
     windows_width = window.innerWidth * canvas_scale_x;
     windows_height = window.innerHeight * canvas_scale_y;
@@ -26,16 +25,27 @@ function setup() {
     cam.setPosition(300, 400, 550);
     cam.lookAt(0, 0, 0)
 
-    textFont(font);
-    textSize(36);
-    text('adfsasdfasdf')
+    orbitControl(1, 1, 1);
 
+    space_elements = [];
+    for (let i = 0; i < 10; i++) {
+        space_element = create_element();
+        space_elements.push(1);
+    }
+    console.log(space_elements)
 }
 
 function draw() {
+    background(200)
+    normalMaterial();
+    box()
     orbitControl(1, 1, 1);
-    //background(200)
-    draw_debug()
+    draw_debug();
+}
+
+function create_element() {
+    //radial distance,  polar angle, azimuthal angle, element_radius, element_color
+    return
 }
 
 function draw_debug() {
