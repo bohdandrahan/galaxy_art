@@ -32,20 +32,13 @@ function setup() {
     space_elements = [];
     for (let i = 0; i < 100; i++) {
         let element_color = [Math.random() * 255, Math.random() * 255, Math.random() * 255]
-        let space_element = new SpaceElement(500, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
-            10, element_color, 25, 1)
+        let space_element = new SpaceElement(500 + Math.random() * 150, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
+            Math.random() * 50, element_color, 25, 1)
 
         space_elements.push(space_element);
     }
 
 
-    for (let i = 0; i < 200; i++) {
-        let element_color = [0, 0, 0]
-        let space_element = new SpaceElement(1500, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
-            10, element_color, 25, 1)
-
-        space_elements.push(space_element);
-    }
 
     for (let i = 0; i < 200; i++) {
         let element_color = [255, 255, 0]
@@ -55,13 +48,6 @@ function setup() {
         space_elements.push(space_element);
     }
 
-    // for (let i = 0; i < 1000; i++) {
-    //     let element_color = [255, 255, 0]
-    //     let space_element = new SpaceElement(2000, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
-    //         3, element_color, 25, 1)
-    //
-    //     space_elements.push(space_element);
-    // }
 
     let element_color = [255, 255, 0]
     let space_element = new SpaceElement(0, 0, 0, 1,
@@ -85,7 +71,7 @@ function draw() {
     space_elements.forEach((element, index) => {
         draw_element(element)
 
-        //element.update_coordinates()
+        element.update_coordinates()
 
     })
     //draw_debug();

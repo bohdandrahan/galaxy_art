@@ -17,6 +17,7 @@ class SpaceElement {
         this.color = element_color;
         this.pulse_amplitude_change = pulse_amplitude_change
         this.pulse_period = pulse_period;
+        this.speed = Math.floor(Math.random() * 10)
     }
 
     get_xyz() {
@@ -25,5 +26,9 @@ class SpaceElement {
         let z = this.radial_distance * Math.cos(this.polar_angle)
 
         return [x, y, z]
+    }
+    update_coordinates() {
+        this.azimuthal_angle = this.azimuthal_angle + 0.001 * this.speed
+
     }
 }
