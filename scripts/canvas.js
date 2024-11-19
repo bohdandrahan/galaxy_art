@@ -21,7 +21,7 @@ function setup() {
     let canvasContainer = document.getElementById('main-canvas');
     createCanvas(windows_width, windows_height, WEBGL).parent(canvasContainer);
 
-    background(200);
+    background(0);
 
     cam = createCamera();
     cam.setPosition(5000, 400, 550);
@@ -64,7 +64,7 @@ function draw() {
 
     c = color('orchid');
     ambientLight(c);
-    background(10)
+    background(0)
     normalMaterial();
     orbitControl(1, 1, 1);
 

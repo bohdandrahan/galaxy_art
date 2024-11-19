@@ -28,7 +28,7 @@ class SpaceElement {
         return [x, y, z]
     }
     update_coordinates() {
-        this.azimuthal_angle = this.azimuthal_angle + 0.001 * this.speed
+        this.azimuthal_angle = this.azimuthal_angle + 0.0001 * this.speed
 
     }
 }
