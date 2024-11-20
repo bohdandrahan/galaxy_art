@@ -32,18 +32,17 @@ function setup() {
     space_elements = [];
     for (let i = 0; i < 100; i++) {
         let element_color = [Math.random() * 255, Math.random() * 255, Math.random() * 255]
-        let space_element = new SpaceElement(500 + Math.random() * 150, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
-            Math.random() * 50, element_color, 25, 1)
+        let space_element = new SpaceElement(500 + Math.random() * 150, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, Math.floor(Math.random() * 100),
+            Math.random() * 50, element_color, 0.5, Math.floor(Math.random() * 20) + 3, Math.floor(Math.random() * 3) * 2 * Math.PI)
 
         space_elements.push(space_element);
     }
 
 
-
     for (let i = 0; i < 200; i++) {
         let element_color = [255, 255, 0]
         let space_element = new SpaceElement(1300, Math.random() * 2 * Math.PI, Math.random() * 2 * Math.PI, 1,
-            5, element_color, 25, 1)
+            5, element_color, 0.5, Math.floor(Math.random() * 20))
 
         space_elements.push(space_element);
     }
@@ -51,7 +50,7 @@ function setup() {
 
     let element_color = [255, 255, 0]
     let space_element = new SpaceElement(0, 0, 0, 1,
-        60, element_color, 25, 1)
+        60, element_color, 0.5, Math.floor(Math.random() * 20))
 
     space_elements.push(space_element);
     console.log(space_elements)
@@ -72,6 +71,7 @@ function draw() {
         draw_element(element)
 
         element.update_coordinates()
+        element.update_radius(frameCount, 30)
 
     })
     //draw_debug();
@@ -82,7 +82,7 @@ function draw_element(element) {
 
     translate(...coordinates)
     fill(...element.color)
-    sphere(element.element_radius)
+    sphere(element.current_element_radius)
     translate(-coordinates[0], -coordinates[1], -coordinates[2])
 }
 
